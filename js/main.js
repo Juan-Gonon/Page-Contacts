@@ -38,26 +38,22 @@ function createContacts(contacts){
 
 
 function deleteDuplicate(contacts){
-  let nuevoContacts = []
+
+  let view = new Set();
 
   for(let i=0; i<contacts.length; i++){
-    let isDuplicate = false;
+    let stringContacts = JSON.stringify(contacts[i]);
 
-    for(let j=0; j<nuevoContacts.length; j++){
-      if(JSON.stringify(contacts[i]) === JSON.stringify(nuevoContacts[j])){
-        isDuplicate = true;
-        alert('Contacto Repetido')
-        break;
-      }
+    if(view.has(stringContacts)){
+      alert('No puede ingresar un mismo contacto')
+      contacts.splice(i,1);
+      i--;
+    }else{
+      view.add(stringContacts)
     }
-
-    if(!isDuplicate){
-      nuevoContacts.push(contacts[i])
-    }
-
   }
 
-  return nuevoContacts;
+  return contacts
 }
 
 function orderContacts(contacts){
@@ -81,7 +77,9 @@ function getContact(data){
     
     contacts.push(data);
 
+    console.log(contacts)
     let duplicateContacts = deleteDuplicate(contacts);
+    console.log(duplicateContacts)
     let contactsOrder = orderContacts(duplicateContacts)
 
     // console.log(duplicateContacts)
