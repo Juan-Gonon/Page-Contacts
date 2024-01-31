@@ -37,29 +37,55 @@ function createContacts(contacts){
 }
 
 
+function deleteDuplicate(contacts){
+  let nuevoContacts = []
+
+  for(let i=0; i<contacts.length; i++){
+    let isDuplicate = false;
+
+    for(let j=0; j<nuevoContacts.length; j++){
+      if(JSON.stringify(contacts[i]) === JSON.stringify(nuevoContacts[j])){
+        isDuplicate = true;
+        alert('Contacto Repetido')
+        break;
+      }
+    }
+
+    if(!isDuplicate){
+      nuevoContacts.push(contacts[i])
+    }
+
+  }
+
+  return nuevoContacts;
+}
+
+function orderContacts(contacts){
+
+  for(let i=0; i<contacts.length; i++){
+    for(let j=0; j<contacts.length -1; j++){
+      if(contacts[j] > contacts[j+1]){
+        [contacts[j], contacts[j+1]] = [contacts[j+1], contacts[j]]
+      }
+    }
+  }
+
+  return contacts;
+
+}
+
+
 
 
 function getContact(data){
     
     contacts.push(data);
-    let nuevoContacts = []
 
-    for(let i=0; i<contacts.length; i++){
-      let isDuplicate = false;
+    let duplicateContacts = deleteDuplicate(contacts);
+    let contactsOrder = orderContacts(duplicateContacts)
 
-      for(let j=0; j<nuevoContacts.length; j++){
-        if(JSON.stringify(contacts[i]) === JSON.stringify(nuevoContacts[j])){
-          isDuplicate = true;
-          alert('Contacto Repetido')
-          break;
-        }
-      }
+    // console.log(duplicateContacts)
+  
 
-      if(!isDuplicate){
-        nuevoContacts.push(contacts[i])
-      }
-
-    }
-
-    createContacts(nuevoContacts)
+    createContacts(contactsOrder)
 }

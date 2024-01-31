@@ -176,10 +176,17 @@ body{
                 }
             }
         }
-        &:nth-child(2){
+        &:nth-child(5){
             label{
                 h2{
                     background: linear-gradient(135deg, #fd6f6a 10%, #ffc600 100%);
+                }
+            }
+        }
+        &:nth-child(6){
+            label{
+                h2{
+                    background: linear-gradient(135deg, #70f570 10%, #49c628 100%);
                 }
             }
         }
