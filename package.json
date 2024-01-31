@@ -1,0 +1,19 @@
+{
+  "name": "page-contacts",
+  "version": "1.0.0",
+  "description": "page contacts js",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juan-Gonon/Page-Contacts.git"
+  },
+  "author": "@Juan-Gonon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Juan-Gonon/Page-Contacts/issues"
+  },
+  "homepage": "https://github.com/Juan-Gonon/Page-Contacts#readme"
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <section class="form">
+        <form id="uploadingForm">
+            <label for="nombre">nombre</label>
+            <input type="text" name="form1" id="nombre">
+            <label for="apellido">Apellido</label>
+            <input type="text" name="form1" id="apellido">
+            <label for="numero">Numero</label>
+            <input type="number" name="form1" id="numero">
+            <label for="email">Correo</label>
+            <input type="email" name="form1" id="email">
+            <button id="btnGuardar">Guardar</button>
+        </form>
+    </section>
+
+    <section class="container" id="container">
+        <h1>Contactos</h1>
+        <div class="tab">
+            <input type="radio" name="abrir" id="1">
+            <label for="1">
+                <h2>1</h2>
+                <h3>Juan</h3>
+            </label>
+            <div class="content">
+                <h4>Numero</h4>
+                <p>58911212</p>
+                <h4>Correo Electrónico</h4>
+                <p>juan@gmail.com</p>
+            </div>
+        </div>
+        <div class="tab">
+            <input type="radio" name="abrir" id="2">
+            <label for="2">
+                <h2>2</h2>
+                <h3>Paco</h3>
+            </label>
+            <div class="content">
+                <h4>Numero</h4>
+                <p>58911212</p>
+                <h4>Correo Electrónico</h4>
+                <p>juan@gmail.com</p>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="js/nodes.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
