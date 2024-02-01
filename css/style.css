@@ -108,6 +108,39 @@ body {
   flex-direction: column;
   gap: 20px;
 }
+.container.active h1 {
+  width: 200px;
+  height: 25px;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.05);
+  animation: loading-skeleton infinite 1.5s;
+}
+.container.active .tab {
+  animation: loading-skeleton infinite 1.5s;
+}
+.container.active .tab input {
+  pointer-events: none;
+}
+.container.active .tab label {
+  pointer-events: none;
+}
+.container.active .tab label h3 {
+  width: 150px;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.05);
+  animation: loading-skeleton infinite 1.5s;
+}
+.container.active .tab:nth-child(2) label h2 {
+  background: rgba(0, 0, 0, 0.05);
+  animation: loading-skeleton infinite 1.5s;
+}
+.container.active .tab:nth-child(3) label h2 {
+  background: rgba(0, 0, 0, 0.05);
+  animation: loading-skeleton infinite 1.5s;
+}
+.container.active .tab:hover label::after {
+  color: rgba(0, 0, 0, 0.05);
+}
 .container h1 {
   color: #333;
   font-weight: 500;
@@ -227,4 +260,13 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+@keyframes loading-skeleton {
+  0%, 100% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 50%;
+  }
 }/*# sourceMappingURL=style.css.map */

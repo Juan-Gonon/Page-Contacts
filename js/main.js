@@ -1,5 +1,6 @@
 
 function createContacts(contacts){
+    container.classList.remove('active')
     container.innerHTML = '';
     const title = document.createElement('h1')
     let tabs = '';
@@ -100,9 +101,7 @@ function getContact(data){
     
     contacts.push(data);
 
-    console.log(contacts)
     let duplicateContacts = deleteDuplicate(contacts);
-    console.log(duplicateContacts)
     let contactsOrder = orderContacts(duplicateContacts)
 
     // console.log(duplicateContacts)
