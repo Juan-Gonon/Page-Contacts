@@ -71,6 +71,29 @@ function orderContacts(contacts){
 }
 
 
+function searchContacts(contacts, nombre){
+  let nuevoArreglo = []
+
+  for(let i=0; i<contacts.length; i++){
+    let name = contacts[i][0];
+    let coincidencia = true;
+
+    for(let j=0; j<nombre.length; j++){
+      if(name[j] != nombre[j]){
+        coincidencia = false;
+        break;
+      }
+    }
+
+    if(coincidencia){
+      nuevoArreglo.push(contacts[i])
+    }
+
+  }
+
+  return nuevoArreglo;
+}
+
 
 
 function getContact(data){
@@ -86,4 +109,9 @@ function getContact(data){
   
 
     createContacts(contactsOrder)
+
+    search.addEventListener('input', (e)=>{
+      let searchContact = searchContacts(contactsOrder, search.value);
+      createContacts(searchContact)
+    })
 }

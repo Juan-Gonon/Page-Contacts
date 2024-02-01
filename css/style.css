@@ -12,6 +12,92 @@ body {
   align-items: center;
   min-height: 100vh;
   background: #f5f8ff;
+  flex-wrap: wrap;
+}
+
+.search {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.search h2 {
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+.search input {
+  position: relative;
+  border: none;
+  outline: none;
+  padding: 10px 25px;
+  border-radius: 15px;
+  color: #333;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.02);
+  min-width: 400px;
+  width: 100%;
+}
+.search input::-moz-placeholder {
+  color: #333;
+}
+.search input::placeholder {
+  color: #333;
+}
+
+.form {
+  position: relative;
+  max-width: 400px;
+  padding: 20px 30px;
+  background: rgba(0, 0, 0, 0.01);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+.form h3 {
+  position: relative;
+  color: #333;
+  font-weight: 600;
+}
+.form h3::before {
+  content: "+";
+  position: absolute;
+  left: -20px;
+}
+.form form {
+  display: flex;
+  flex-direction: column;
+}
+.form form label {
+  text-transform: capitalize;
+  margin-top: 15px;
+}
+.form form input {
+  width: 250px;
+  outline: none;
+  border: none;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+.form form button {
+  width: 100px;
+  margin-top: 8px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  background: #fff;
+  transition: background 1s;
+}
+.form form button:hover {
+  background: linear-gradient(135deg, #70f570 10%, #49c628 100%);
 }
 
 .container {
@@ -24,6 +110,7 @@ body {
 }
 .container h1 {
   color: #333;
+  font-weight: 500;
 }
 .container .tab {
   position: relative;
@@ -94,6 +181,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(135deg, #70f570 10%, #49c628 100%);
 }
 .container .tab label h3 {
   position: relative;
@@ -133,4 +221,10 @@ body {
 }
 .container .tab:nth-child(6) label h2 {
   background: linear-gradient(135deg, #70f570 10%, #49c628 100%);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */
